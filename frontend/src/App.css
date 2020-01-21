@@ -1,0 +1,22 @@
+.App {
+  background-color: #282c34;
+  color: white;
+  height: 100%;
+}
+
+.cardFront{
+  background-color: aqua;
+  height: 45vh;
+}
+
+.cardBack{
+  background-color: aquamarine;
+  height: 45vh;
+}
+
+.buttonFrame{
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
