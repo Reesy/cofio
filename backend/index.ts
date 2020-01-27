@@ -10,12 +10,6 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
-  
-app.get('/test', (req: express.Request, res: express.Response) =>
-{
-    console.log("Library api called from" + req.ip);
-    res.send('test');
-});
 
 //////// Get Decks
 
@@ -38,12 +32,14 @@ app.get('/test', (req: express.Request, res: express.Response) =>
       Cards may exist in multiple decks so the association needs to be thin. 
 
 */
-
+app.get('/card', (req: express.Request, res: express.Response) =>
+{
+    console.log("Library api called from" + req.ip);
+    res.send('Card Successfully GOT');
+});
 
 
 //////// PUT Card 
-
-
 /**
   this will put an existing card
 
@@ -51,21 +47,12 @@ app.get('/test', (req: express.Request, res: express.Response) =>
       cardID <A Guid representing the card>
 
  */
+app.put('/card', (req: express.Request, res: express.Response) =>
+{
+    console.log("Library api called from" + req.ip);
+    res.send('Card Successfully PUT');
+});
 
-
-
-
-
-
-/**
- 
-
- 
-
-
- */
 console.log("Listening on port 3050");
-
-
 
 app.listen(3050);
