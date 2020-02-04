@@ -25,4 +25,9 @@ export interface Card
      * Path to any associated Image for the flash card
      */
     image: string;
+
+    /**
+     * Interval
+     */
+    interval: number;
 }
